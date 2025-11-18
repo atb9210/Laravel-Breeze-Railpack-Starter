@@ -4,6 +4,7 @@
     "build": {
       "commands": [
         "...",
+        { "cmd": "rm -rf node_modules/.vite node_modules/.cache", "customName": "Cleanup Vite cache" },
         { "cmd": "npm ci --include=dev", "customName": "Install dev deps (vite)" },
         { "cmd": "npm run build", "customName": "Vite build" },
         { "cmd": "php artisan config:cache", "customName": "Cache config" },
